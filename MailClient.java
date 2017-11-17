@@ -55,4 +55,14 @@ public class MailClient
         MailItem item = new MailItem(user, to, message, subject);
         server.post(item);
     }
+
+    /**
+     * Metodo que permita saber desde un cliente de correo electrónico
+     * cuántos correos electrónicos tenemos en el servidor para nosotros
+     */
+    public void numeroDeCorreos()
+    {
+        System.out.println("Tiene "+ server.howManyMailItems(user) +
+            " nuevo(s) emails en su buzon de entrada");
+    }
 }
