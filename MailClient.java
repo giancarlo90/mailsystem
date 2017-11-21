@@ -11,7 +11,8 @@ public class MailClient
     private MailServer server;
     // The user running this client.
     private String user;
-
+    private String ultimoMensaje;
+    
     /**
      * Create a mail client run by user and attached to the given server.
      */
@@ -19,6 +20,7 @@ public class MailClient
     {
         this.server = server;
         this.user = user;
+        ultimoMensaje = null;
     }
 
     /**
